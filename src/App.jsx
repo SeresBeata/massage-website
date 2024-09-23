@@ -14,7 +14,14 @@ const App = () => {
 
   const [videos, setVideos] = useState([])
 
-  const [lang, setLang] = useState(en)
+  const storedLanguage = localStorage.getItem('language')
+  const [lang, setLang] = useState(storedLanguage === 'de' ? de : en)
+  const [activeLang, setActiveLang] = useState(
+    storedLanguage === 'de' ? 'de' : 'en'
+  )
+  let activeLangStyle = { border: 'white 2px solid' }
+  let inactiveLangStyle = { border: 'none' }
+
   useEffect(() => {
     if (images.length === 0) {
       getImages()
@@ -138,6 +145,27 @@ const App = () => {
 
   return (
     <>
+      <button
+        onClick={() => {
+          setLang(en)
+          setActiveLang('en')
+          localStorage.setItem('language', 'en')
+        }}
+        style={activeLang === 'en' ? activeLangStyle : inactiveLangStyle}
+      >
+        EN
+      </button>
+      <button
+        onClick={() => {
+          setLang(de)
+          setActiveLang('de')
+          localStorage.setItem('language', 'de')
+        }}
+        style={activeLang === 'de' ? activeLangStyle : inactiveLangStyle}
+      >
+        DE
+      </button>
+
       <h3>{lang.title}</h3>
 
       <h1>{lang.subtitle}</h1>
