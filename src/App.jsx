@@ -1,6 +1,8 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 import fetch from './api/fetch'
+import de from '../src/assets/de.json'
+import en from '../src/assets/eng.json'
 
 const App = () => {
   const [images, setImages] = useState([])
@@ -12,6 +14,7 @@ const App = () => {
 
   const [videos, setVideos] = useState([])
 
+  const [lang, setLang] = useState(en)
   useEffect(() => {
     if (images.length === 0) {
       getImages()
@@ -135,6 +138,40 @@ const App = () => {
 
   return (
     <>
+      <h3>{lang.title}</h3>
+
+      <h1>{lang.subtitle}</h1>
+      <h2>{lang.treatments}</h2>
+
+      <p>{lang.relaxation_centric_therapies_title}</p>
+      <p>{lang.relaxation_centric_therapies_summary}</p>
+      <p>{lang.relaxation_centric_therapies_price}</p>
+
+      <p>{lang.advanced_therapies_title}</p>
+      <p>{lang.advanced_therapies_summary}</p>
+      <p>{lang.advanced_therapies_price}</p>
+
+      <p>{lang.wellness_therapies_title}</p>
+      <p>{lang.wellness_therapies_summary}</p>
+      <p>{lang.wellness_therapies_price}</p>
+
+      <p>{lang.about_title}</p>
+      <p>{lang.about_summary}</p>
+
+      <p>{lang.client_feedback_title}</p>
+      <p>{lang.client_feedback_first_client_summary}</p>
+      <p>{lang.client_feedback_first_client_name}</p>
+      <p>{lang.client_feedback_second_client_summary}</p>
+      <p>{lang.client_feedback_second_client_name}</p>
+
+      <p>{lang.contact_title}</p>
+      <p>{lang.contact_tel}</p>
+      <p>{lang.contact_address}</p>
+
+      <p>{lang.opening_hours_title}</p>
+      <p>{lang.opening_hours_summary}</p>
+
+      <div>
         {images.map((image) => (
           <img
             key={image.id}
@@ -143,6 +180,7 @@ const App = () => {
             style={{ height: '100px', margin: '20px' }}
           />
         ))}
+      </div>
 
       <div>
         {videos.map((video) => (
