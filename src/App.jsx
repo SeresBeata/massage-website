@@ -4,6 +4,8 @@ import fetch from './api/fetch'
 import de from '../src/assets/de.json'
 import en from '../src/assets/eng.json'
 
+import Symbol from './components/Symbol/Symbol'
+
 const App = () => {
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(false)
@@ -165,6 +167,8 @@ const App = () => {
       >
         DE
       </button>
+
+      <Symbol />
 
       <h3>{lang.title}</h3>
 
