@@ -4,6 +4,8 @@ import fetch from './api/fetch'
 import de from '../src/assets/de.json'
 import en from '../src/assets/eng.json'
 
+//components
+import Navbar from './components/Navbar'
 import Symbol from './components/Symbol/Symbol'
 import Animation from './components/Animation/Animation'
 
@@ -148,6 +150,7 @@ const App = () => {
 
   return (
     <>
+      <Navbar />
       <button
         onClick={() => {
           setLang(en)
