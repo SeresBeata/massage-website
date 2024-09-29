@@ -28,15 +28,28 @@ const style = {
 const Navbar = ({ lang, activeLang, setLang, setActiveLang }) => {
   return (
     <div style={style.nav}>
-      <Box
-        sx={{
-          width: '150px'
-        }}
-      >
-        <Button variant="contained" sx={style.buttonEn}>
+      <Box sx={{ fontWeight: 'bold' }}>Relaxify</Box>
+      <Box sx={style.buttonContainer}>
+        <Button
+          variant="contained"
+          sx={activeLang === 'en' ? style.activeLangStyle : style.button}
+          onClick={() => {
+            setLang(en)
+            setActiveLang('en')
+            localStorage.setItem('language', 'en')
+          }}
+        >
           EN
         </Button>
-        <Button variant="contained" sx={style.buttonDe}>
+        <Button
+          variant="contained"
+          sx={activeLang === 'de' ? style.activeLangStyle : style.button}
+          onClick={() => {
+            setLang(de)
+            setActiveLang('de')
+            localStorage.setItem('language', 'de')
+          }}
+        >
           DE
         </Button>
       </Box>
