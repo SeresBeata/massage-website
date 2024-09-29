@@ -1,8 +1,13 @@
 .container--main {
-  background: black;
+  /* background: #ddbeaa; */
   height: 500px;
   position: relative;
   overflow: hidden;
+  background-image: url(https://media.istockphoto.com/id/1162187810/de/foto/r%C3%BCcken-sport-massage-therapie.jpg?s=2048x2048&w=is&k=20&c=JERiBEVVHnFjrvmxnPHndMxMXjm6c8VO52CIlS1-yxc=);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
 }
 
 .container {
@@ -25,8 +30,8 @@
 }
 
 .black {
-  background: black;
-  animation: rotate 20s infinite linear;
+  background: #285757;
+  animation: rotate 50s infinite linear;
 }
 
 @keyframes rotate {
