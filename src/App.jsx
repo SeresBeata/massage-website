@@ -150,8 +150,13 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
       <button
+      <Navbar
+        lang={lang}
+        setLang={setLang}
+        activeLang={activeLang}
+        setActiveLang={setActiveLang}
+      />
         onClick={() => {
           setLang(en)
           setActiveLang('en')
