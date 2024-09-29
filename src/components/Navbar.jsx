@@ -1,4 +1,6 @@
 import { Button, Box } from '@mui/material'
+import en from '../assets/eng.json'
+import de from '../assets/de.json'
 
 const style = {
   nav: {
