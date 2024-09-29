@@ -5,6 +5,7 @@ import de from '../src/assets/de.json'
 import en from '../src/assets/eng.json'
 
 import Symbol from './components/Symbol/Symbol'
+import Animation from './components/Animation/Animation'
 
 const App = () => {
   const [images, setImages] = useState([])
@@ -169,6 +170,7 @@ const App = () => {
       </button>
 
       <Symbol />
+      <Animation />
 
       <h3>{lang.title}</h3>
 
