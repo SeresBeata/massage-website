@@ -16,7 +16,7 @@ const style = {
   }
 }
 
-const Navbar = () => {
+const Navbar = ({ lang, activeLang, setLang, setActiveLang }) => {
   return (
     <div style={style.nav}>
       <Box
