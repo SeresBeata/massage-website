@@ -4,15 +4,22 @@ const style = {
   nav: {
     backgroundColor: '#EDC5AB',
     display: 'flex',
-    justifyContent: 'right',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     padding: '10px'
   },
-  buttonDe: {
-    backgroundColor: '#469597'
+  buttonContainer: {
+    width: '150px',
+    display: 'flex',
+    justifyContent: 'space-evenly'
   },
-  buttonEn: {
-    backgroundColor: '#469597',
-    marginRight: '15px'
+  button: {
+    backgroundColor: '#EDC5AB',
+    border: '#469597 2px solid',
+    color: '#469597'
+  },
+  activeLangStyle: {
+    backgroundColor: '#469597'
   }
 }
 
