@@ -3,6 +3,13 @@
   justify-content: center;
   padding: 40px;
   /* background: #fff; */
+  /* background: #ddbeaa; */
+  background-image: url(https://images.pexels.com/photos/734973/pexels-photo-734973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
   box-sizing: border-box;
 }
 * {
@@ -15,8 +22,9 @@
   box-sizing: border-box;
   width: 40vmin;
   height: 40vmin;
-  background: linear-gradient(black 50%, white 0);
+  background: linear-gradient(#285757 50%, white 0);
   /* border: 6px solid #01fee1; */
+  border: 10px solid #469597;
   border-radius: 50%;
 
   animation-name: spin;
@@ -45,14 +53,14 @@
 
 .yin-yang:before {
   transform-origin: 0% 50%;
-  background: black;
+  background: #285757;
   border-color: white;
   animation-direction: alternate-reverse;
 }
 .yin-yang:after {
   transform-origin: 100% 50%;
   background: white;
-  border-color: black;
+  border-color: #285757;
 }
 
 @keyframes size {
