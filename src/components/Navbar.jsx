@@ -1,4 +1,5 @@
-import { Button, Box } from '@mui/material'
+import { Button, Box, Typography } from '@mui/material'
+import SpaIcon from '@mui/icons-material/Spa'
 import en from '../assets/eng.json'
 import de from '../assets/de.json'
 
@@ -22,13 +23,22 @@ const style = {
   },
   activeLangStyle: {
     backgroundColor: '#469597'
+  },
+  logo: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row'
   }
 }
 
 const Navbar = ({ lang, activeLang, setLang, setActiveLang }) => {
   return (
     <div style={style.nav}>
-      <Box sx={{ fontWeight: 'bold' }}>Relaxify</Box>
+      <Box style={style.logo}>
+        <SpaIcon />
+        <Typography>Relaxify</Typography>
+      </Box>
       <Box sx={style.buttonContainer}>
         <Button
           variant="contained"
