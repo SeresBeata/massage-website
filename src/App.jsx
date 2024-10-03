@@ -94,32 +94,12 @@ const App = () => {
 
   return (
     <>
-      <button
       <Navbar
         lang={lang}
         setLang={setLang}
         activeLang={activeLang}
         setActiveLang={setActiveLang}
       />
-        onClick={() => {
-          setLang(en)
-          setActiveLang('en')
-          localStorage.setItem('language', 'en')
-        }}
-        style={activeLang === 'en' ? activeLangStyle : inactiveLangStyle}
-      >
-        EN
-      </button>
-      <button
-        onClick={() => {
-          setLang(de)
-          setActiveLang('de')
-          localStorage.setItem('language', 'de')
-        }}
-        style={activeLang === 'de' ? activeLangStyle : inactiveLangStyle}
-      >
-        DE
-      </button>
 
       <Animation />
 
