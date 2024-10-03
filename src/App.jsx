@@ -121,7 +121,6 @@ const App = () => {
         DE
       </button>
 
-      <Symbol />
       <Animation />
 
       <h3>{lang.title}</h3>
