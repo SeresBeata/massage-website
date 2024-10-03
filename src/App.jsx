@@ -84,62 +84,6 @@ const App = () => {
       })
   }
 
-  // useEffect(() => {
-  //   const getImages = async () => {
-  //     setLoading(true)
-  //     await fetch
-  //       .get(`https://api.pexels.com/v1/search?query=$massage&per_page=20`)
-  //       .then((res) => {
-  //         setImages([...images, ...res.data.photos])
-  //         setLoading(false)
-  //         console.log(res)
-  //       })
-  //       .catch((er) => {
-  //         if (er.response) {
-  //           const error =
-  //             er.response.status === 404
-  //               ? 'Page not found'
-  //               : 'Something wrong has happened'
-  //           setError(error)
-  //           setLoading(false)
-  //           console.log(error)
-  //         }
-  //       })
-  //   }
-  //   getImages()
-  // }, [nextPage, perPage])
-
-  // useEffect(() => {
-  //   const getVideos = async () => {
-  //     setLoading(true)
-  //     await fetch
-  //       .get(
-  //         `https://api.pexels.com/videos/search?query=massage&page=${nextPage}&per_page=${perPage}`
-  //       )
-  //       .then((res) => {
-  //         return res
-  //       })
-  //       .then((data) => {
-  //         console.log(data)
-  //         setVideos(data.data.videos)
-  //         setLoading(false)
-  //       })
-  //       .catch((er) => {
-  //         console.log(er)
-  //         if (er.response) {
-  //           const error =
-  //             er.response.status === 404
-  //               ? 'Page not found'
-  //               : 'Something wrong has happened'
-  //           setError(error)
-  //           setLoading(false)
-  //           console.log(error)
-  //         }
-  //       })
-  //   }
-  //   getVideos()
-  // }, [nextPage, perPage])
-
   const handleLoadMoreClick = () => setNextPage(nextPage + 1)
 
   const handleLoadLessClick = () => {
